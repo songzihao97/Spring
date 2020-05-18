@@ -1,0 +1,50 @@
+package com.szh.service;
+
+import com.szh.domain.Account;
+
+import java.util.List;
+
+/**
+ * 账户的业务层接口
+ */
+public interface AccountService {
+
+    /**
+     * 查询所有
+     * @return
+     */
+    List<Account> findAllAccount();
+
+    /**
+     * 查询一个
+     * @param id
+     * @return
+     */
+    Account findById(Integer id);
+
+    /**
+     * 保存
+     * @param account
+     */
+    void saveAccount(Account account);
+
+    /**
+     * 更新
+     * @param account
+     */
+    void updateAccount(Account account);
+
+    /**
+     * 删除
+     * @param id
+     */
+    void deleteAccount(Integer id);
+
+    /**
+     * 转帐
+     * @param sourceName
+     * @param targetName
+     * @param money
+     */
+    void transfer(String sourceName,String targetName,double money);
+}
